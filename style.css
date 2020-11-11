@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap');
+
+h1, h2 {
+    color: #47DBEE;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+label {
+    font-size: 1.25em;
+}
+
+section {
+    padding-bottom: 25px;
+    width: 66%;
+    margin: auto;
+}
+
+footer {
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+button {
+    background-color: #47DBEE;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition: all .2s ease-in-out;
+}
+
+.spacing {
+    margin: 10px;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+td {
+    padding-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #C04E38;
+}
+
+#logo {
+    display: block;
+    width: 300px;
+    height: auto;
+    margin: auto;
+}
+
+#githubLogo {
+    width: 40px;
+    height: 40px;
+}
+
+.subtext {
+    font-size: 1em;
+    font-style: italic;
+    width: 80%;
+}
+
+.collapsible {
+    background-color: rgb(49, 49, 49);
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+  }
+  
+  .active, .collapsible:hover {
+    background-color: rgb(78, 78, 78);
+  }
+  
+  .collapsibleContent {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #f1f1f1;
+  }
+
+  .centerDivItems {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+  }
+
+/* NAVBAR */
+  /* Add a black background color to the top navigation */
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Add an active class to highlight the current page */
+  .topnav a.active {
+    background-color: #47DBEE;
+    color: white;
+  }
+  
+  /* Hide the link that should open and close the topnav on small screens */
+  .topnav .icon {
+    display: none;
+  }
+
+/* NAVBAR STYLE END */
+
+/* Color Theme Swatches in Hex */
+.Cores-14-1-hex { color: #27706B; }
+.Cores-14-2-hex { color: #45B5AA; }
+.Cores-14-3-hex { color: #FFD31A; }
+.Cores-14-4-hex { color: #F6896A; }
+.Cores-14-5-hex { color: #C04E38; }
+
+/* Color Theme Swatches in RGBA */
+.Cores-14-1-rgba { color: rgba(39, 112, 107, 1); }
+.Cores-14-2-rgba { color: rgba(69, 181, 170, 1); }
+.Cores-14-3-rgba { color: rgba(255, 211, 26, 1); }
+.Cores-14-4-rgba { color: rgba(246, 137, 106, 1); }
+.Cores-14-5-rgba { color: rgba(192, 78, 56, 1); }
+
+/* Color Theme Swatches in HSLA */
+.Cores-14-1-hsla { color: hsla(175, 48, 29, 1); }
+.Cores-14-2-hsla { color: hsla(174, 44, 49, 1); }
+.Cores-14-3-hsla { color: hsla(48, 100, 55, 1); }
+.Cores-14-4-hsla { color: hsla(13, 88, 69, 1); }
+.Cores-14-5-hsla { color: hsla(9, 54, 48, 1); }
