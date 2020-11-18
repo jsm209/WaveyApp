@@ -6,9 +6,22 @@
   <title>Wavey</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" type="text/css" media="screen" href="./style.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css" />
 
   <!--<script type="module" src="./js/main.js" defer></script>-->
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
+
+  <!-- File storage SDK -->
+  <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-storage.js"></script>
+
+  <!-- Datastore SDK -->
+  <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-database.js"></script>
+
+  <script src="./js/shopifyBuyButton.js"></script>
+
+  <script type="module" src="./js/main.js" defer></script>
 
 </head>
 
@@ -20,8 +33,8 @@
 
 <div class="topnav" id="myTopnav">
   <a href="index.html">Home</a>
-  <a href="shop.html">Shop</a>
-  <a href="about.html" class="active">About</a>
+  <a href="shop.html" class="active">Shop</a>
+  <a href="about.html">About</a>
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
   </a>
@@ -29,10 +42,19 @@
 
 <!-- Content -->
   <section>
-    <h1>About</h1>
-    <p>This will be the about page.
+    <h1>Shop</h1>
+    <p>This will be the shop page.
     </p>
   </section>
+
+
+
+
+  <div id='product-component-1605480100417'></div>
+
+
+
+
 
 
   <footer>
