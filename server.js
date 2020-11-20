@@ -9,6 +9,10 @@ app.use('/css', express.static(__dirname + '/public/css'));
 app.use('/js', express.static(__dirname + '/public/js'));
 app.use('/images', express.static(__dirname + '/public/images'));
 
+app.get('*', (req, res) => {
+    res.sendFile('/public/index.html');
+})
+
 const server = http.createServer((req, res) => {
     res.writeHead(200, { 'content-type': 'text/html' })
     fs.createReadStream('index.html').pipe(res)
