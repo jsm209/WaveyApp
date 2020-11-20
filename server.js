@@ -6,15 +6,17 @@ const { response } = require('express');
 
 const app = express();
 
-// Getting our resources
-var htmlFile;
-fs.readFile('./public.html', function(err, data) {
-    if (err) {
-        throw err;
-    }
-    htmlFile = data;
-});
+var path = require('path');
+var filePath = "./public/index.html";
+var resolvedPath = path.resolve(filePath);
+console.log(resolvedPath);
 
+
+app.get('/', function(req, res) {
+    res.sendFile(resolvedPath);
+})
+
+/*
 const server = http.createServer((req, res) => {
 
     // Serves different files based on url
@@ -28,3 +30,4 @@ const server = http.createServer((req, res) => {
 
   server.listen(process.env.PORT || 3000) // Specifies the port to whatever heroku gives us or 5000 on localhost.
 
+*/
