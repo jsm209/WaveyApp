@@ -1,21 +1,20 @@
-const http = require('http');
 const express = require("express");
-
-const fs = require('fs');
-const { response } = require('express');
-
 const app = express();
+const path = require('path');
+const port = process.env.PORT || 3000; // Uses port set by environment (Heroku) or 3000 by default.
 
-var path = require('path');
-var filePath = "./public/index.html";
-var resolvedPath = path.resolve(filePath);
-console.log(resolvedPath);
-
+// Getting our resources
+app.use(express.static('public'));
+app.use('/css', express.static(__dirname + '/public/css'));
+app.use('/js', express.static(__dirname + '/public/js'));
+app.use('/images', express.static(__dirname + '/public/images'));
 
 app.get('/', function(req, res) {
-    res.sendFile(resolvedPath);
-})
+    res.sendFile(path.join(__dirname + '/public/index.html'));
+});
 
+
+app.listen(port, () => console.log("Listening on port " + port + "!"));
 /*
 const server = http.createServer((req, res) => {
 
