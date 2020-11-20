@@ -28,7 +28,7 @@ app.post('/new-online-order', (req, res) => {
     // Let shopify know we recieved the order details
     res.send('OK');
 
-    var data = req.body;
+    const data = req.body;
     console.log(data);
 })
 
