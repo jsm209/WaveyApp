@@ -34,7 +34,7 @@
     <h2>Part 1 - Audio Playback</h2>
     <p>Test site for audio upload. There will be two parts to it, on one side we upload audio along with its order ID, this will be an internal tool.</p>
     <p>The second part is audio playback, where you can include an ID in the URL where the ID is the order ID and get back the same audio.</p>
-    <p>This url will look like "some-domain-here/?id=1000" where id=1000 is replaced by id=whatever-order-number.</p>
+    <p>This url will look like "https://waveyapp.herokuapp.com/?id=1000" where id=1000 is replaced by id=whatever-order-number.</p>
     <p>We then give this url to a QR code generator who will transform it for use to use.</p>
     <p>The two tools, uploading the audio with an order ID, and the playing back of audio, will be seperated so customers can't upload files.</p>
   </section>
@@ -55,15 +55,19 @@
   </section>
 
   <section>
-    <h2>File</h2>
-    <input type="file" id="fileUpload">
-  
-    <h2>Order ID</h2>
-    <input type="text" id="orderID">
+    <form id="uploadForm">
+      <h2>File</h2>
+      <input type="file" id="fileUpload">
+    
+      <h2>Order ID</h2>
+      <input type="text" id="orderID">
+    </form>
+
   
       
     <button onclick="uploadFile()">Upload</button>
     <p>* Only click upload once you gave a file and order ID.</p>
+    <p id="uploadButtonFeedback"></p>
   </section>
 
 

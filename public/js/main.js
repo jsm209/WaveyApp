@@ -97,7 +97,13 @@ const uploadFile = () => {
 
       // Uploads the metadata from the earlier file upload under the given
       // key, can be overwritten if the same key is submitted.
-      database.ref("Uploads/").child($("orderID").value).set({url: downloadURL});
+      let orderID = $("orderID").value;
+
+      database.ref("Uploads/").child(orderID).set({url: downloadURL});
+
+      // Clears the form
+      $("uploadForm").reset();
+      $("uploadButtonFeedback").innerText = "Your upload link is: " + "https://waveyapp.herokuapp.com/?id=" + orderID;
     });
     
   });
