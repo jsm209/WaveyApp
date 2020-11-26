@@ -12,6 +12,7 @@ app.use(express.static('public'));
 app.use('/css', express.static(__dirname + '/public/css'));
 app.use('/js', express.static(__dirname + '/public/js'));
 app.use('/images', express.static(__dirname + '/public/images'));
+app.use('/cirular-audio-wave', express.static(__dirname + '/node_modules/circular-audio-wave/dist/'));
 
 // Shopify issues an HTTP POST request
 app.use(bodyParser.json());
@@ -21,7 +22,7 @@ app.use(bodyParser.urlencoded({
 
 // Routes
 app.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname + '/public/index.html'));
+    res.sendFile(path.join(__dirname + '/public/playback.html'));
 });
 
 app.post('/new-online-order', (req, res) => {

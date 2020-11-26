@@ -3,12 +3,22 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>Wavey</title>
+  <title>Revibes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="./css/playback.css" />
 
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
+
+  <!-- File storage SDK -->
+  <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-storage.js"></script>
+
+  <!-- Datastore SDK -->
+  <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-database.js"></script>
+  
   <script type="module" src="./js/main.js" defer></script>
+  
 
 </head>
 
@@ -18,34 +28,51 @@
 <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<div class="topnav" id="myTopnav">
-  <a href="index.html" class="active">Home</a>
-  <a href="shop.html">Shop</a>
-  <a href="about.html">About</a>
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
-  </a>
-</div>
-
 <!-- Content -->
   <section>
-    <h1>Wavey</h1>
-    <p>This is a basic homepage. Hopefully we can put some kind of big hero image/banner image here. Maybe do a 
-        carousel or something really eye catching and designy.
-    </p>
-
-    <p>Wavey is a company that allows you to put sound on clothing. We're planning on having a custom order form where
-        you can upload audio, see the waveform, and buy clothing that can be scanned to hear the sound back.
-    </p>
+    <h1>REVIBE APPAREL</h1>
+    <h2>Part 1 - Audio Playback</h2>
+    <p>Test site for audio upload. There will be two parts to it, on one side we upload audio along with its order ID, this will be an internal tool.</p>
+    <p>The second part is audio playback, where you can include an ID in the URL where the ID is the order ID and get back the same audio.</p>
+    <p>This url will look like "some-domain-here/?id=1000" where id=1000 is replaced by id=whatever-order-number.</p>
+    <p>We then give this url to a QR code generator who will transform it for use to use.</p>
+    <p>The two tools, uploading the audio with an order ID, and the playing back of audio, will be seperated so customers can't upload files.</p>
   </section>
+
+  <section>
+    <audio id="audio" controls autoplay>
+      <source id="audioSource" type="audio/mp3">
+    </audio>
+  </section>
+
+
+  <section>
+    <h2>Part 2 - Audio Upload</h2>
+    <p>Upload files for testing.</p>
+    <p>To use this, choose a file and input the corresponding order ID.</p>
+    <p>(Shopify assigns order IDs to orders, but we can pick whatever number for now)</p>
+    <p>Then click the "upload" button. If you click upload without a file and/or an ID it breaks so be careful.</p>
+  </section>
+
+  <section>
+    <h2>File</h2>
+    <input type="file" id="fileUpload">
+  
+    <h2>Order ID</h2>
+    <input type="text" id="orderID">
+  
+      
+    <button onclick="uploadFile()">Upload</button>
+    <p>* Only click upload once you gave a file and order ID.</p>
+  </section>
+
+
 
 
   <footer>
     <div class="centerDivItems">
-      <p>© 2020 Wavey </p>
+      <p>© 2020 Revibe Apparel </p>
     </div>
-
-
   </footer>
 
 </body>

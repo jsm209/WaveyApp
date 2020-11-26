@@ -1,3 +1,14 @@
+
+// Will get variables in URL
+// They can be accessed with getUrlVars()["name of variable"]
+function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+    return vars;
+}
+
 // Given an object with properties or a dictionary
 // will sort by their values and return the top x results
 // and return the resulting array.
@@ -28,4 +39,4 @@ function $(id) {
     return document.getElementById(id);
 }
 
-export {sortTopOccurences, unEntity, $};
+export {getUrlVars, sortTopOccurences, unEntity, $};

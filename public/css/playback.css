@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arapey&display=swap');
+/*
+THEME COLORS:
+#85dae0 - light cyan
+#83e2cc - mint green
+#4f35d3 - purplish blue
+#643aab - grape juice purple
+#ff0080 - hot pink
+
+
+*/
+
+h1, h2 {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+p {
+    color: white;
+    font-family: 'Arapey', serif;
+}
+
+section {
+    width: 60%;
+    margin: auto;
+    padding-bottom: 50px;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background-image: linear-gradient(to bottom right, #643aab, #85dae0);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+footer {
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+.centerDivItems {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
